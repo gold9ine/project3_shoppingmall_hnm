@@ -24,6 +24,8 @@ import PrivateRoute from "./routes/PrivateRoute";
 // 5-1. 로그아웃이 되면 상품 디테일페이지를 볼 수 없다. 다시 로그인 페이지가 보인다.
 // 6. 로그인을 하면 로그아웃이 보이고 로그아웃을 하면 로그인이 보인다.
 // 7. 상품을 검색할 수 있다.
+// Demo : https://noona-hnm.netlify.app/
+// My : https://pro3hnm.netlify.app
 
 function App() {
   let [authenticate, setAuthenticate] = useState(false);

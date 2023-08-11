@@ -5,13 +5,13 @@ const ProductCard = ({ item }) => {
   const navigate = useNavigate();
   const showDetail = () => {
     navigate(`/product/${item.id}`);
-  }
+  };
   const showProduct = (id) => {
     navigate(`/product/${id}`);
   };
   return (
-    <div className="card" style={{ cursor: "pointer" }} onClick={showDetail}>
-    {/* <div className="card" onClick={() => showProduct(item.id)}> */}
+    // <div className="card" style={{ cursor: "pointer" }} onClick={showDetail}>
+    <div className="card" onClick={() => showProduct(item.id)}>
       <img src={item?.img} />
       <div className="choice">{item?.choice ? "Conscious choice" : ""}</div>
       <div>{item?.title}</div>

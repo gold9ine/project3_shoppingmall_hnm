@@ -70,8 +70,8 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
         </ul>
         <div className="search-box">
           <FontAwesomeIcon icon={faSearch} />
-          <input type="text" placeholder="제품검색" onKeyPress={(event) => onCheckEnter(event)} />
-          {/* <input type="text" placeholder="제품검색" onKeyPress={onCheckEnter} /> */}
+          {/* <input type="text" placeholder="제품검색" onKeyPress={(event) => onCheckEnter(event)} /> */}
+          <input type="text" placeholder="제품검색" onKeyPress={onCheckEnter} />
         </div>
       </div>
     </div>
