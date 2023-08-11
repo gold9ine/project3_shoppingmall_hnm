@@ -1,38 +1,174 @@
-.App {
-  text-align: center;
+body {
+    font-family: sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 20px;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-header * {
+    margin-right: 10px;
+    margin-top: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.menu {
+    display: flex;
+    list-style-type: none;
+    padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.menu li a {
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.nav-menu-area {
+    display: flex;
+    justify-content: center;
+}
+
+.burger-menu {
+    margin-left: 20px;
+}
+
+
+.search-box {
+    border-bottom: 1px solid black;
+    position: absolute;
+    right: 20px;
+    padding: 5px;
+}
+
+.search-box input {
+    border: none;
+    margin-left: 5px;
+}
+
+.search-box input:focus {
+    outline: none
+}
+
+.card {
+    border: none !important;
+    margin-bottom: 10px;
+}
+
+.choice {
+    font-size: 11px;
+    color: #63786a;
+    font-weight: bold;
+    height: 20px;
+}
+
+.new-product {
+    font-size: 11px;
+    height: 20px;
+}
+
+.login-form {
+    width: 40em;
+}
+
+.login-area {
+    display: flex;
+    justify-content: center;
+}
+
+.form-control:valid {
+    background-color: white !important;
+}
+
+.product-detail-img {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.product-info {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.drop-down {
+    margin-top: 20px;
+}
+
+.add-button {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+.hide {
+    visibility: hidden
+}
+
+@media screen and (max-width: 63rem) {
+    .hide {
+        visibility: visible;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .search-box {
+        display: none;
+    }
+}
+
+.side-menu {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: burlywood;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 2
+}
+
+.side-menu-list button {
+    margin: 5px;
+    border: none;
+    background: none;
+    width: 120px;
+}
+
+.side-menu .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    border: none;
+    background: none;
+}
+
+.side-menu-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.side-menu-list button:hover {
+    background-color: beige;
+    border-radius: 3px;
 }
