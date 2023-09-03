@@ -26,18 +26,19 @@ import PrivateRoute from "./routes/PrivateRoute";
 // 7. 상품을 검색할 수 있다.
 // Demo : https://noona-hnm.netlify.app/
 // My : https://pro3hnm.netlify.app
+// 리덕스 최종 코드 : https://hackmd.io/@oW_dDxdsRoSpl0M64Tfg2g/BkP5TACmc
 
 function App() {
-  let [authenticate, setAuthenticate] = useState(false);
+  // let [authenticate, setAuthenticate] = useState(false);
 
   return (
     <div>
-      <Navbar authenticate={authenticate} setAuthenticate={setAuthenticate} />
+      {/* <Navbar authenticate={authenticate} setAuthenticate={setAuthenticate} /> */}
+      <Navbar />
       <Routes>
         <Route path="/" element={<ProductAll />} />
-        <Route
-          path="/login"
-          element={<Login setAuthenticate={setAuthenticate} />}
+        {/* <Route path="/login" element={<Login setAuthenticate={setAuthenticate} />} */}
+        <Route path="/login" element={<Login />}
         />
         <Route
           path="/product/:id"
@@ -46,7 +47,9 @@ function App() {
           // 방법 1 _ 로그인 인증 (Login 컴포넌트 바로 호출)
           // element={<PrivateRoute authenticate={authenticate} setAuthenticate={setAuthenticate}/>}
           // 방법 2 _ 로그인 인증 (Navigate 사용)
-          element={<PrivateRoute authenticate={authenticate} />}
+          // element={<PrivateRoute authenticate={authenticate} />}
+          // 방법 3 _ useSelector 사용 PrivateRoute 에서 authenticate 판단
+          element={<PrivateRoute />}
         />
       </Routes>
     </div>
